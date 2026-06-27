@@ -66,7 +66,7 @@ export const Banner = () => {
 
             <Container>
                 <Row className="align-items-center">
-                    <Col xs={12} md={6} xl={7}>
+                    <Col xs={12} lg={7} xl={7}>
                         <TrackVisibility once>
                             {({ isVisible }) =>
                                 <div className={isVisible ? "animate__animated animate__fadeInLeft animate__delay-1s" : ""}>
@@ -95,7 +95,7 @@ export const Banner = () => {
                                 </div>}
                         </TrackVisibility>
                     </Col>
-                    <Col xs={12} md={6} xl={5}>
+                    <Col xs={12} lg={5} xl={5} className="d-none d-lg-block">
                         <TrackVisibility once>
                             {({ isVisible }) =>
                                 <div className={isVisible ? "animate__animated animate__fadeInRight" : ""}>
