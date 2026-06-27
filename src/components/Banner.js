@@ -12,13 +12,8 @@ export const Banner = () => {
     const [isDeleting, setIsDeleting] = useState(false);
     const [text, setText] = useState('');
     const [delta, setDelta] = useState(300 - Math.random() * 100);
-    const [loaded, setLoaded] = useState(false);
     const toRotate = ["Web Developer", "Web Designer", "Software Developer", "MERN Stack Developer", "Code Explorer", "AI/ML Enthusiast"];
     const period = 2000;
-
-    useEffect(() => {
-        setLoaded(true);
-    }, []);
 
     useEffect(() => {
         let ticker = setInterval(() => {
@@ -26,7 +21,7 @@ export const Banner = () => {
         }, delta);
 
         return () => { clearInterval(ticker) };
-
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [text])
 
     const tick = () => {
